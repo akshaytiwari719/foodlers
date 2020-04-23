@@ -19,3 +19,6 @@ Route::get('/login','Controller@login');
 Route::get('/dashboard','Controller@display');
 Route::post('/save_customer','Controller@storeCustomer');
 Route::post('/verify','Controller@varifyLogin');
+Route::get('/vegeterian','Controller@showVegetarian');
+
+//Route::get('/test','Controller@show');

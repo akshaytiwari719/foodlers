@@ -9,6 +9,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Redirect;
 use App\models\Customer;
+use App\models\Product;
 
 class Controller extends BaseController
 {
@@ -26,12 +27,12 @@ class Controller extends BaseController
     }
     public function storeCustomer(Request $request){
       $this->validate($request,[
-        'name'=>'required|min:6',
+        'name'=>'required|max:20',
         'email'=>'email:rfc,dns',
         'c_no'=>'required|min:10|max:10',
         'DOB'=>'required',
         'address'=>'required',
-        'password'=>'required|confirmed|min:6',
+        'password'=>'required|confirmed|min:6|max:10',
       ]);
 
         $customer=new Customer;
@@ -44,7 +45,7 @@ class Controller extends BaseController
         $customer->Password=$request->password;
         if($customer->save())
         {
-          return Redirect::to('dashboard');
+          return Redirect::to('login');
         }
         return 'unsuccessful';
     }
@@ -62,7 +63,29 @@ class Controller extends BaseController
            return redirect()->back()->with('error','wronglogin detail');
        }
        else{
-         return Redirect::to('dashboard');
+         $request->session()->flash('email',$request->input('email'));
+         return view('dashboard')->with('welcome',$request->session()->get('email'));
+         //return Redirect::to('dashboard');
        }
     }
+
+    public function showVegetarian(Request $request){
+      $product=new Product;
+      $product=Product::select('*')->where([['Type','=','veg']])->get()->toArray();
+      //dd($product);
+      return view('vegetarian',compact('product'));
+    }
+
+  /*  public function show(Request $request){
+      $product= new Product;
+
+      if ($product->save()) {
+        $product=new Product;
+        $product=Product::select('*')->where([['Type','=',$request['nonveg']]])->get()->toArray();
+        dd($product);
+            // return view('vegetarian',['akshay'=>$product]);
+         }
+         return 'data not sucessfully updated';
+      //return view('vegetarian');
+    }*/
 }

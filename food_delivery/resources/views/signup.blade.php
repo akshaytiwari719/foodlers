@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 3px;
-}
-input[type=email]{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 3px;
-}
-input[type=tel] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 3px;
-}
-input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 3px;
-}
-input[type=button] , button {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  background-color: #323334;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-}
-.abc{
-  align-items: center;
-  width: 50%;
-  text-align: center;
-  margin: auto;
-}
-form{
-border: 1px solid #b8b8b8;
-padding: 20px;
-border-radius: 3px;
-background-color: #727272;
-}
-body{
-  color: #ffffff;
-}
-input[type=date]{
-width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 3px;
-  }
-</style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 3px;
+    }
+    input[type=email]{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 3px;
+    }
+    input[type=tel] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 3px;
+    }
+    input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 3px;
+    }
+    input[type=button] , button {
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: #323334;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .abc{
+      align-items: center;
+      width: 50%;
+      text-align: center;
+      margin: auto;
+    }
+    form{
+      border: 1px solid #b8b8b8;
+      padding: 20px;
+      border-radius: 3px;
+      background-color: #727272;
+    }
+    body{
+      color: #ffffff;
+    }
+    input[type=date]{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 3px;
+    }
+  </style>
 </head>
 <body>
     <div class="abc">

@@ -89,6 +89,7 @@
                 <div class="links">
                     <a href="login">Login</a>
                     <a href="signup">Signup</a>
+                    <a href="dashboard">dashboard</a>
 
                 </div>
             </div>

@@ -62,11 +62,14 @@ img{border-radius: 3px;
     </div>
   </nav>
 <form >
+  {{
+    Session::get('email')
+  }}
   <div class="container">
   <div class="row mt-3">
     <div class="col-md-6 text-center mb-4">
       <?php $aks=Storage::url('vegeterian.jpg');?>
-      <a href="Veg"><img src="{{$aks}}" alt="vegeterian">
+      <a href="vegeterian"><img src="{{$aks}}" alt="vegeterian">
       <h4>Vegeterian</h4></a>
     </div>
     <div class="col-md-6  text-center mb-4">
